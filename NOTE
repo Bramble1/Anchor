@@ -1,0 +1,3 @@
+Need to have a smaller memory footprint, let's have the 
+buffers in main, and pass as pointers to the functions
+as required, and then memsetting once we're done.
