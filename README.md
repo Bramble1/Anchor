@@ -5,4 +5,4 @@ Only works on Debian. This isn't a portable program.
 
 # Video demonstration
 
-[Demonstration](https://www.youtube.com/watch?v=<YouTube_video_ID>)
+[Demonstration](https://youtu.be/DYszhW_pPiw?si=zju1Czqe1yQCdTW2)
