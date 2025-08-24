@@ -1,0 +1,9 @@
+use a queue buffer to get all bytes up until =
+to get the value, and then everything after we place into another queue.
+
+we then link these together like a linked list, and then for the key, we then add another key, so it forms somewhat of a linked list
+which we will then hold in memory, and then runs as a daemon in order to get key/value pairs and to update things
+
+or can just create a hashtable, so we hash, the first queue, and then place the second queue in the index array
+
+

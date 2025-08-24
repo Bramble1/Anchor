@@ -1,0 +1,5 @@
+Maybe instead of having an alias, I just use the func jump { source ~/.bashrc; cd $(./anchor peek)}
+
+would that work?
+
+I could add this function initially and if the theory goes, WHen creating a function in a session I don't need to do source ~/.bashrc on the function itself
