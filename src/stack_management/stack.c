@@ -31,7 +31,10 @@ void pop(Stack *st,char *directory)
 
 void peek(Stack *st,char *directory)
 {
-	strcpy(directory,st->stack[st->top]);
+	if(st->top>=0)
+		strcpy(directory,st->stack[st->top]);
+	else
+		strcpy(directory,"");
 }
 
 void display(Stack *st)
@@ -44,6 +47,8 @@ void display(Stack *st)
 	if(i==st->top)
 		printf("\033[33m[%d]%s\033[0m\n",i,st->stack[i]);
 
+	printf("top=%d\n",st->top);
+
 }
 
 void save_structure(Stack *st,char *filename)
@@ -51,7 +56,7 @@ void save_structure(Stack *st,char *filename)
 	char path[150]="\0";
 	sprintf(path,"%s/%s",getenv("HOME"),filename);
 
-	FILE *fd=fopen(path,"wb");
+	FILE *fd=fopen(filename,"wb");
 	if(fd==NULL)
 	{
 		perror("Error opening file for writing");
@@ -69,7 +74,7 @@ Stack load_structure(char *filename)
 	sprintf(path,"%s/%s",getenv("HOME"),filename);
 
 	Stack st = init_stack();
-	FILE *fd=fopen(path,"rb");
+	FILE *fd=fopen(filename,"rb");
 	if(fd==NULL)
 		return st;
 
