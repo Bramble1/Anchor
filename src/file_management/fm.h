@@ -12,6 +12,8 @@ extern char *Stacks;
 extern char *config;
 extern char *default_stack;
 
+#include "../misc/misc.h"
+
 typedef struct 
 {
 	char File[100];
